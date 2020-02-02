@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
   <head>
     <title>data science for fun and non-profit</title>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <meta name="author" content="kara woo research scientist sage bionetworks" />
     <link href="woo_eastside_prep_files/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
     <link href="woo_eastside_prep_files/remark-css-0.0.1/default.css" rel="stylesheet" />
@@ -30,7 +30,7 @@ A non-profit research institute working to make science more **open**, **collabo
 ???
 A lot of scientific work tends to be very closed, people don't want to share their data etc.
 
-I joined Sage because of the focus on open science
+I joined Sage in part because of the focus on open science
 
 My colleagues are computational biologists, software engineers, designers
 
@@ -53,8 +53,7 @@ We get grants from funding agencies to help other scientists share their data
 - We curate and share data from AMP-AD and related groups
 
 ???
-- alzheimers is both common and devastating, no effective treatment
-- data comes from many different sources — post-mortem brain samples from individuals who have donated their brains to brain banks, some data on living humans, and data from mice and other model organism
+
 - omics data, behavioral, lots of different types, some quite large (especially omics data) — many consist of hundreds or thousands of files that can be multiple gigabytes each
 
 ---
@@ -84,12 +83,15 @@ I also clean and validate data that researchers submit. This can be very time co
 ---
 class: center
 
-## The last dataset I curated required &gt;40 emails
+## Curating a dataset used to take &gt;40 emails
 
 ![flopping dog with "ugghhh" caption](https://media1.giphy.com/media/nu6h2TlAh0gCY/giphy.gif?cid=3640f6095c7739e54c47333073ee74cd)
 
 ---
-background-image: url(images/validator.png)
+background-image: url(images/amp-results.png)
+
+---
+background-image: url(images/amp-results-details.png)
 
 ---
 background-image: url(images/ampadportal.png)
@@ -246,14 +248,14 @@ library("BRRR")
 skrrrahh()
 ```
 
-<html><body><audio controls><source src="/Library/Frameworks/R.framework/Versions/3.5/Resources/library/BRRR/adlibs/gucci1.wav"></audio></body></html>
+<html><body><audio controls><source src="/Library/Frameworks/R.framework/Versions/3.6/Resources/library/BRRR/adlibs/gucci1.wav"></audio></body></html>
 
 
 ```r
 skrrrahh("flava")
 ```
 
-<html><body><audio controls><source src="/Library/Frameworks/R.framework/Versions/3.5/Resources/library/BRRR/adlibs/flava.wav"></audio></body></html>
+<html><body><audio controls><source src="/Library/Frameworks/R.framework/Versions/3.6/Resources/library/BRRR/adlibs/flava.wav"></audio></body></html>
 
 ![:credit black, Brooke Watson](https://github.com/brooke-watson/BRRR)
 
@@ -373,7 +375,24 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
     }
     deleted = true;
   });
-})();</script>
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
 
 <script>
 (function() {
