@@ -82,12 +82,15 @@ I also clean and validate data that researchers submit. This can be very time co
 ---
 class: center
 
-## The last dataset I curated required >40 emails
+## Curating a dataset used to take >40 emails
 
 ![flopping dog with "ugghhh" caption](https://media1.giphy.com/media/nu6h2TlAh0gCY/giphy.gif?cid=3640f6095c7739e54c47333073ee74cd)
 
 ---
-background-image: url(images/validator.png)
+background-image: url(images/amp-results.png)
+
+---
+background-image: url(images/amp-results-details.png)
 
 ---
 background-image: url(images/ampadportal.png)
