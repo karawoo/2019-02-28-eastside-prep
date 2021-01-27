@@ -1,6 +1,6 @@
 ---
 title: "data science for fun and non-profit"
-author: "kara woo<br>research scientist<br>sage bionetworks"
+author: "kara woo<br>principal bioinformatics engineer<br>sage bionetworks"
 output:
   xaringan::moon_reader:
     css: [default-fonts, default, "style.css"]
@@ -37,11 +37,12 @@ My colleagues are computational biologists, software engineers, designers
 
 # my team at sage
 
-Data Coordinating Center for communities researching neurodegenerative and neuropsychiatric diseases
+Building tools and infrastructure to support open science
 
-???
+- HIPAA-compliant cloud computing space to run analyses
+- Scientific workflows to process large amounts of sequencing data
+- Tools to help researchers share data
 
-We get grants from funding agencies to help other scientists share their data
 
 ---
 
@@ -49,7 +50,7 @@ We get grants from funding agencies to help other scientists share their data
 ### Accelerating Medicines Partnership - Alzheimer’s Disease
 
 - Identifying potential drug targets for Alzheimer’s disease
-- We curate and share data from AMP-AD and related groups
+- Sage curates and shares data from AMP-AD and related groups
 
 ???
 
@@ -67,7 +68,7 @@ Developing standards for metadata to enable cross-project collaboration and shar
 
 --
 
-Data cleaning and validation
+Building tools to make all of this easier
 
 ???
 
@@ -96,7 +97,7 @@ background-image: url(images/amp-results-details.png)
 background-image: url(images/ampadportal.png)
 class:urlslide
 
-# https://ampadportal.org
+# https://adknowledgeportal.synapse.org
 
 ---
 
@@ -257,7 +258,7 @@ skrrrahh()
 ```{r play-audio, echo = FALSE}
 html1 <- "gucci.html"
 save_audio_snippet(
-  system.file("adlibs/gucci1.wav", package = "BRRR"), 
+  system.file("adlibs","gucci1.wav", package = "BRRR"), 
   html1
 )
 htmltools::includeHTML(html1)
@@ -317,6 +318,15 @@ rainbowCats(x, y, ptsize = 2, catshiftx = 0.5, catshifty = -0.2)
 ```
 
 ![:credit black, David Gibbs](https://github.com/Gibbsdavidl/CatterPlots)
+
+---
+# And if you prefer ggplot2 over base R plots
+
+```{r ggcats, message = FALSE, results = "hide"}
+library("ggcats")
+ggplot(mtcars) +
+  geom_cat(aes(x = mpg, y = wt), cat = "lil_bub", size = 5)
+```
 
 ---
 class: inverse, middle, center
